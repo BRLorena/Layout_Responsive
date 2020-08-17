@@ -31,5 +31,4 @@
     href="responsive.css" 
     media="screen and (max-width: 768px)"
   />
-
-<link rel="stylesheet" href="print.css" media="print">
+  <link rel="stylesheet" href="print.css" media="print">
