@@ -16,7 +16,7 @@
   <img src="img/site.png">
   <img src="img/resto.png"><br><br>
   <img id="gif" src="img/openImage.gif">
-  <br><br>
+  <br>
 
   # CSS units:
   Layout Fixed: px (pixel)<br>
