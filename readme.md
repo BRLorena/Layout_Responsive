@@ -2,12 +2,23 @@
 
  Here I'm using a responsive layout, this permits me have acess using a cellphone, tablet or desktop.
  For it, use of estrategies with the CSS units, how will I talk below.
- it was also used CSS Media Queries for add CSS costumization according to the defined breakpoint for the layout adapt to the device.
+ It was also used CSS Media Queries for add CSS costumization according to the defined breakpoint for the layout adapt to the device.
  I used the special HTML tags to have the most responsive layout possible.
   <br> <br>
 
-  # CSS units:
+ #  <img src="img/jsLogo.png"> JavaScript 
+ <a href = "#gif" >Function JS</a>
 
+ I also used JS to add functionality to my cards. In fact, all cards are added dynamically.
+ Using a const "images" that receives an array of objects with the data created. And when you click on the card the image opens using a "getAttribute" based on the "id".
+ 
+
+  <img src="img/site.png">
+  <img src="img/resto.png"><br><br>
+  <img id="gif" src="img/openImage.gif">
+  <br><br>
+
+  # CSS units:
   Layout Fixed: px (pixel)<br>
   Layout Fluid: % percent auto, Auto, vw (ViewPortHeight)<br> and vw(ViewPort Width)<br>
   Text Fixed: px.<br>
@@ -17,7 +28,6 @@
   <br> <br>
 
   # CSS Media Queries:
-  
   In HTML I put the tag meta. 
   meta name="viewport" content="width=device-width, initial-scale=1.0"
   <br> <br> 

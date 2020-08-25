@@ -1,55 +1,54 @@
 /// Make Cards
 const sectionCards = document.querySelector("section.cards");
-
 const card = document.querySelector("div.card");
 
-const videos = [
+const images = [
   {
-    title: "Animated form with pure JS and CSS Animation | Mayk Brito",
-    duration: "57 min",
-    thumb: "https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg",
-    video_id: "GykTLqODQuU"
+    title: "The 3 friend's | Ana Lorena <br> click to see more",
+    price: "25€ each",
+    thumb: "img/3amigos.jpg",
+    id: "img/3amigos.jpg"
   },
   {
-    title: "Unraveling the CSS Grid in practice| Mayk Brito",
-    duration: "36 min",
-    thumb: "https://i.ytimg.com/vi/HN1UjzRSdBk/hqdefault.jpg",
-    video_id: "HN1UjzRSdBk"
+    title: "The cute deer | Ana Lorena <br> click to see more",
+    price: "22€",
+    thumb: "img/alce.jpg",
+    id: "img/alce.jpg",
+
   },
   {
-    title: "Array: Higher Order Functions | Mayk Brito",
-    duration: "54 min",
-    thumb: "https://i.ytimg.com/vi/rAzHvYnQ8DY/hqdefault.jpg",
-    video_id: "rAzHvYnQ8DY"
+    title: "The Ane with her book | Ana Lorena <br> click to see more",
+    price: "28€",
+    thumb: "img/ane2.jpg",
+    id: "img/ane2.jpg"
   },
   {
-    title: "What is API? REST and RESTful? | Mayk Brito",
-    duration: "33 min",
-    thumb: "https://i.ytimg.com/vi/ghTrp1x_1As/hqdefault.jpg",
-    video_id: "ghTrp1x_1As"
+    title: "The Olivia  | Ana Lorena <br> click to see more",
+    price: "26€",
+    thumb: "img/olivia.jpg",
+    id: "img/olivia.jpg"
   },
   {
-    title: "unraveling the variabel 'this' in Javascript | Mayk Brito",
-    duration: "48 min",
-    thumb: "https://i.ytimg.com/vi/GSqR2i-Pq6o/hqdefault.jpg",
-    video_id: "GSqR2i-Pq6o"
+    title: "Sheep | Ana Lorena <br> click to see more",
+    price: "22€",
+    thumb: "img/ovelha2.jpg",
+    id: "img/ovelha2.jpg"
   },
   {
-    title:
-      " How to use Git and Github in practice: Guide for beginners | Mayk Brito",
-    duration: "33 min",
-    thumb: "https://i.ytimg.com/vi/2alg7MQ6_sI/hqdefault.jpg",
-    video_id: "2alg7MQ6_sI"
+    title:" The Rabbit in her dress | Ana Lorena <br> click to see more",
+    price: "32€",
+    thumb: "img/coelhaAmarela.jpg",
+    id: "img/coelhaAmarela.jpg"
   }
 ];
 
-videos.map(video => {
+images.map(images => {
   const cardClone = card.cloneNode(true);
-  cardClone.setAttribute("id", video.video_id);
-  cardClone.querySelector("img").src = video.thumb;
-  cardClone.querySelector(".title").innerHTML = video.title;
+  cardClone.setAttribute("id", images.id);
+  cardClone.querySelector("img").src = images.thumb;
+  cardClone.querySelector(".title").innerHTML = images.title;
   cardClone.querySelector(".info > p.text--medium").innerHTML =
-    video.duration;
+    images.price;
   sectionCards.appendChild(cardClone);
 });
 
@@ -63,8 +62,8 @@ const cards = [...document.querySelectorAll(".cards .card")];
 cards.forEach(card => {
   card.addEventListener("click", () => {
     modal.querySelector(
-      "iframe"
-    ).src = `https://www.youtube.com/embed/${card.getAttribute("id")}`;
+      "img"
+    ).src = `${card.getAttribute("id")}`;
     modalOverlay.classList.add("active");
     modal.classList.add("active");
     document.querySelector("body").style.overflow = "hidden";
@@ -74,7 +73,7 @@ cards.forEach(card => {
 document.querySelector(".close-modal").addEventListener("click", () => {
   modalOverlay.classList.remove("active");
   modal.classList.remove("active");
-  modal.querySelector("iframe").src = ``;
+  modal.querySelector("img").src = ``;
   document.querySelector("body").style.overflow = "initial";
 });
-// MENU RESPONSe
+// MENU RESPONSE
